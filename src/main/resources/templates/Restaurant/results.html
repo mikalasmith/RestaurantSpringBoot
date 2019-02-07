@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title> Subscriber List</title>
+	<meta http-equiv ="Content-Type" : content="text/html; charset=UTF-8" />
+	<link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+	<h1>You are confirmed!</h1>
+	<h3>This is your information:</h3>
+	 Name: <span th:text="${name}"/>
+	 <br/><br/>
+	 Owner: <span th:text="${owner}"/>
+	 <br/><br/>
+	 Phone Number: <span th:text="${phoneNumber}"/>
+	 <br/><br/>
+	 Address: <span th:text="${address}"/>
+	 <br/><br/>
+	 
+	 <a th:href="@{/}"<button class="btn btn-success">Back to Home Page</button></a>
+	 
+	 <a th:href="@{/new}"><button class="btn btn-success">Submit Another Restaurant</button></a>
+<div/>
+<script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+</body>
+</html>
