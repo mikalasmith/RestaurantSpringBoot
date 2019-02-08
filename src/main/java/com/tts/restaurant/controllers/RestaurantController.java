@@ -24,12 +24,12 @@ public class RestaurantController {
 	public String index(Restaurant restaurant, Model model) {
 		restaurants = (List<Restaurant>) restaurantRepository.findAll();
 		model.addAttribute("restaurants", restaurants);	
-	return "restaurant/index";
+	return "Restaurant/index";
 	}
 	
 	@GetMapping(value="/new")
 	public String addNew(Restaurant restaurant) {
-		return "restaurant/form";
+		return "Restaurant/form";
 	}
 	
 	
@@ -41,7 +41,7 @@ public class RestaurantController {
 		model.addAttribute("name", restaurant.getName());
 		model.addAttribute("phoneNumber", restaurant.getPhoneNumber());
 		model.addAttribute("address", restaurant.getAddress());
-		return "restaurant/results";
+		return "Restaurant/results";
 		
 	}
 	
